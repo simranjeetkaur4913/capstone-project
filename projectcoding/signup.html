@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel = "stylesheet" type="text/css" href="about.css">
-        <link rel = "stylesheet" type="text/css" href="main.css">
+        <link rel = "stylesheet" type="text/css" href="css/about.css">
+        <link rel = "stylesheet" type="text/css" href="css/main.css">
 
     </head>
     <body>
@@ -25,22 +25,26 @@
         </div>
         <input type="checkbox" id="small-menu" />
         <div class="nav">
-            <a href="index.php">Home</a>
-            <a href="about.css">About Us</a>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
             <a href="staff.php">Staff</a>
             <a href=#>Classes</a>
             <a href=#>Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href=#>Admin Login</a>
+            <a href="signup.html">Admin Login</a>
         </div>
 		<div classs="loginpage">
-			<h1>Login</h1>
-		<form action="login.php" method="post">
-		<label>Username:</label>
+			<h1>Sign Up</h1>
+		<form action="php/signup.php" method="post">
+			<label>Name:</label>
+		<input type="text" name="firstname" placeholder="First Name">
+		<input type="text" name="lastname" placeholder="Last Name"><br><br>
+			<label>Username:</label>
 		<input type="text" name="username"><br><br>
 		<label>Password:</label>
 		<input type="text" name="password"><br><br>
-		<input type="Submit" value="Login">
+		<input type="Submit" value="Sign Up">
+		<h3>already account?<a href="login.html">Login</a></h3>
 			</form>
 		</div>
 		 <div class="footer-upper-part">
