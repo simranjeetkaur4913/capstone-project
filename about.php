@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="header-part">
-            Get In Touch With Us: +1 2269728272
+            Get In Touch With Us: +1 2269728372
         </div>
         <div class="small-menu-container">
             <label for="small-menu">
