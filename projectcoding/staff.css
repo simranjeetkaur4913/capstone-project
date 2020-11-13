@@ -1,0 +1,24 @@
+.staff
+{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #FAF3DD;
+    
+}
+.staff table tr th
+{
+    text-align: center;
+}
+
+.staff table tr td
+{
+    text-align: center;
+}
+.StaffImage
+{
+    padding: 30px 100px 30px 100px;
+    background-color: #FAF3DD;
+    
+}

@@ -30,7 +30,7 @@
     color:#EBDC87;
     text-decoration:none;
 }
-#small-menu
+.small-menu
 {
     display:none;
 }
@@ -38,7 +38,7 @@
 {
     background-color:#FAF3DD;
     color:#000000;
-    padding:8px;px;
+    padding:8px;
     display:none;
     justify-content:flex-end;
 }
