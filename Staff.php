@@ -1,3 +1,21 @@
+<?php
+require('mysqli_connect.php');
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	$firstname=mysqli_real_escape_string($dbc,$_POST['firstname']);
+	$q="select * from staff where firstname='$firstname'";
+	$s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
+	if($row = mysqli_fetch_array($s)){
+		echo $row['firstname'].'<br>';
+        echo $row['lastname'].'<br>';
+        echo $row['email'].'<br>';
+        echo $row['department'].'<br>';
+        echo $row['phone'].'<br>';
+	}
+	else{
+		echo 'no matching data available';
+	}
+}
+?>
 <html>
     <head>
         <title>
@@ -38,16 +56,23 @@
 
 
         <div class = "part0"> Our Hardworking Team </div>
+        <div>
+        <form action="staff.php" method="post">
+            <label>Name:</label>
+            <input type="text" name="firstname"><br>
+            <input type="submit" value="Search">
+            </form>
+        </div>
         
         <div class="container-fluid">
             <div class="row">
-            <div class="col-sm-4 StaffImage" > <img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
-            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
-            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage" > <img src = "images/simran.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/gurmeet.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/Rajdeep.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
             </div>
         </div>
         
-        <div class = "staff"> 
+       <!-- <div class = "staff"> 
             <table height = "400px" width = "100%" border="1px">
                 <tr> 
                     <th> NAME</th>
@@ -107,7 +132,7 @@
                     <td> Arts</td>
                 </tr> 
             </table>
-        </div>
+        </div>-->
     
 <div class="footer-upper-part">
 <center>Address: 76, KNOTTY PINE AVE, CAMBRIDGE, ONTARIO, CANADA</center>
