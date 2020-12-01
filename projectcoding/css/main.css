@@ -2,14 +2,13 @@ body
 {
     padding:0px;
     margin:0px;
-    box-sizing:border-box;	
+    box-sizing:border-box;
 }
-
 .header-part
 {
     width:100%;
-    background-color:#555555;
-    color:white;
+    background-color:#000000;
+    color:#FAF3DD;
     font-size:11px;
     padding-left:20px;
     padding-top:8px;
@@ -18,14 +17,14 @@ body
 }
 .nav
 {
-    background-color:#CDC9C3;
+    background-color:#FAF3DD;
     display:flex;
     justify-content:flex-end;
 }
 .nav a
 {
     text-decoration:none;
-    color:#555555;
+    color:#000000;
     text-align:center;
     padding-top:12px;
     padding-bottom:12px;
@@ -34,7 +33,7 @@ body
 }
 .nav a:hover
 {
-    color:white;
+    color:#EBDC87;
     text-decoration:none;
 }
 #small-menu
@@ -43,9 +42,9 @@ body
 }
 .small-menu-container
 {
-    background-color:#CDC9C3;
-    color:white;
-    padding:8px;px;
+    background-color:#FAF3DD;
+    color:#000000;
+    padding:8px;
     display:none;
     justify-content:flex-end;
 }
@@ -53,8 +52,8 @@ body
 {
     width:40px;
     height:36px;
-    background-color:#555555;
-    color:white;
+    background-color:#000000;
+    color:#FAF3DD;
     border-radius:8px;
     display:flex;
     justify-content:center;
@@ -65,32 +64,85 @@ body
 {
     background-color:white;
     width:84%;
-    height:3px;
+    height:2px;
     margin-top:2px;
     margin-bottom:2px;
+}
+.under-slider-part
+{
+    background-color:#FAF3DD;
+    height:auto;
+    padding-top:24px;
+    box-sizing:border-box;
+}
+.under-slider-part-1
+{
+    height:200px;
+    width:80%;
+    margin-left:25px;
+}
+.bgpicture
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home1.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+.bgpicture1
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home2.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bgpicture2
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home3.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bgpicture3
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home4.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.field
+{
+    width:100%;
+    height:20%;
+    background-color:#EBDC87;
 }
 .footer-lower-part
 {
     width:100%;
-    background-color:#555555;
-    color:white;
+    background-color:#FAF3DD;
+    color:#000000;
     padding:10px 0px 10px 0px;
     font-size:12px;
-	
 }
 .footer-upper-part
 {
     width:100%;
-    background-color:#555555;
-    color:white;
+    background-color:#FAF3DD;
+    color:#000000;
     padding:10px 0px 10px 0px;
     font-size:12px;
 }
+
 .footer-main
 {
-    background-color:#CDC9C3;
+    background-color:#000000;
     height:auto;
 }
+
 .footer-inner-1
 {
     padding:6px 20px 20px 20px;
@@ -114,16 +166,14 @@ body
 .footer-inner-2 ul li a
 {
     text-decoration:none;
-    color:#13314C;
+    color:#FAF3DD;
     font-size:12px;
-    font-weight:bold;
     line-height:24px;
 }
 .slide
 {
     position:relative;
     max-width:1400px;
-    border:10px solid #555555;
     margin:0px auto;
 }
 .slide .previous, .next
@@ -131,12 +181,13 @@ body
     position:absolute;
     height:30px;
     width:30px;
-    background-color:#555555;
-    color:#CDC9C3;
+    background-color:#FAF3DD;
+    color:#000000;
     top:40%;
-    margin-top:20px;
+    margin-top:10px;
     text-align:center;
-    line-height:53px;
+    line-height:33px;
+    border-radius:30px;
 }
 .slide .previous
 {
@@ -159,6 +210,101 @@ body
 {
     display:block;
 }
+.contact-top
+{
+    width:100%;
+    height:100px;
+    background-color:#EBDC87;
+    color:#000000;
+    font-size:30px;
+    padding-top:30px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.contact-location-part
+{
+    width:100%;
+    height:240px;
+    background-color:#EBDC87;
+    padding-top:10px;
+    box-sizing:border-box;
+}
+.contact-form-part
+{
+    padding:30px;
+    box-sizing:border-box;
+}
+.contact-address-part
+{
+    
+    padding:30px;
+    box-sizing:border-box;
+}
+.contact-form-holder
+{
+    width:100%;
+    height:auto;
+    padding:10px;
+    box-sizing:border-box;
+    border:2px solid #EBDC87;
+}
+.contact-address-holder
+{
+    width:100%;
+    height:auto;
+    padding:10px;
+    box-sizing:border-box;
+    border:2px solid #EBDC87;
+}
+.textboxes
+{
+    width:100%;
+    
+    
+    padding:3px;
+    box-sizing:border-box;
+}
+.contactbtn
+{
+    border:2px solid #EBDC87;
+    background-color:#FAF3DD;
+    border-radius:40px;
+    padding:7px;
+    box-sizing:border-box;
+}
+
+
+.loginformdecoration
+{
+    width:100%;
+    height:auto;
+    border:2px solid #EBDC87;
+    padding:30px;
+    box-sizing:border-box;
+}
+.loginupdiv
+{
+    width:100%;
+    height:100px;
+    background-image:url('../images/loginup.jpg');
+    color:#000000;
+    font-size:30px;
+    padding-top:30px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.videoholder
+{
+    padding-top:30px;
+    padding-bottom:30px;
+    width:100%;
+    height:auto;
+    box-sizing:border-box;
+}
+
+
+
+
 @media screen and (max-width:650px)
 {
     .nav
