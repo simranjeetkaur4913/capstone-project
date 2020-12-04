@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>Delta English School</title>
@@ -173,7 +174,7 @@
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="staff.php">Staff</a>
-            <a href="department.html">Department</a>
+            <a href="department.php">Department</a>
             <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
             <a href="login.html">Admin Login</a>
@@ -215,7 +216,18 @@
               </div>
         </div>
 		<div>
-		<marquee>Tomorrow is holiday for the sake of independence day</marquee>
+		<marquee><?php
+require('C:\xampp\htdocs\capstoneproject\projectcoding\php\mysqli_connect.php');
+
+	$s = "select * from department";
+$p = mysqli_query($dbc,$s);
+while($row = mysqli_fetch_array($p,MYSQLI_ASSOC)){
+	echo $row['message'];
+
+	
+}
+
+?></marquee>
 		</div>
         <div class="container-fluid department-info1">
               <div class="row">

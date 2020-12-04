@@ -39,7 +39,7 @@
 			if($total ==1){
 		
 		$_SESSION['username'] = $username;
-		echo "<script>location.href='admin-panal.php'</script>";
+		echo "<script>location.href='admin.php'</script>";
 	
 	}
 	
