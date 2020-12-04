@@ -27,7 +27,7 @@
             <a href="department.html">Department</a>
             <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href="signup.html">Admin Login</a>
+            <a href="login.html">Admin Login</a>
         </div>
         <div class="contact-top">Video Gallery</div>
         <div class="container-fluid">
