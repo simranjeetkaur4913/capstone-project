@@ -1,25 +1,8 @@
-<?php
-require('mysqli_connect.php');
-if($_SERVER['REQUEST_METHOD']=='POST'){
-	$firstname=mysqli_real_escape_string($dbc,$_POST['firstname']);
-	$q="select * from staff where firstname='$firstname'";
-	$s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
-	if($row = mysqli_fetch_array($s)){
-		echo $row['firstname'].'<br>';
-        echo $row['lastname'].'<br>';
-        echo $row['email'].'<br>';
-        echo $row['department'].'<br>';
-        echo $row['phone'].'<br>';
-	}
-	else{
-		echo 'no matching data available';
-	}
-}
-?>
+
 <html>
     <head>
         <title>
-            Delta English School --About
+            Delta English School --Staff
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,9 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     </head>
     <body>
-        <div class="header-part">
-            Get In Touch With Us: +1 2269728272
-        </div>
+        <div class="header-part"> Get In Touch With Us: +1 2269728272 </div>
         <div class="small-menu-container">
             <label for="small-menu">
                 <span></span>
@@ -45,31 +26,82 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         </div>
         <input type="checkbox" id="small-menu" />
         <div class="nav">
-            <a href="index.php">Home</a>
-            <a href= "about.php">About Us</a>
+            <a href="home.html">Home</a>
+            <a href="about.php">About Us</a>
             <a href="staff.php">Staff</a>
-            <a href=#>Classes</a>
-            <a href=#>Our Gallery</a>
+            <a href="department.html">Department</a>
+            <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href=#>Admin Login</a>
+            <a href="signup.html">Admin Login</a>
         </div>
-
-
-        <div class = "part0"> Our Hardworking Team </div>
-        <div>
-        <form action="staff.php" method="post">
-            <label>Name:</label>
-            <input type="text" name="firstname"><br>
-            <input type="submit" value="Search">
-            </form>
+        
+        <div class = "part0"> Our School Staff Directory </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3>Chairman</h3> </div> </div>
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3> Pricipal </h3> </div> </div>
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3> Vice Principal </h3> </div> </div>
+            </div>
         </div>
         
         <div class="container-fluid">
             <div class="row">
-            <div class="col-sm-4 StaffImage" > <img src = "images/simran.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
-            <div class="col-sm-4 StaffImage"><img src = "images/gurmeet.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
-            <div class="col-sm-4 StaffImage"><img src = "images/Rajdeep.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+                <div class="col-sm-4 aboutcircle" ><div class = "aboutgraphics"> <img src = "images/gurmeet.jpg" alt = "Chairman" height= "260px" width = "100%" style= "border-radius: 100%"> </div></div>
+                <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/Rajdeep.jpg" alt = "Vice Chairman" height= "260px" width = "100%" style= "border-radius: 100%"></div></div>
+                <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/simran.jpg" alt = "CEO" height= "260px" width = "100%" style= "border-radius: 100%"></div> </div>
             </div>
+        </div>
+       
+        <div> <h3> Full Time Employee Directory </h3> </div> 
+        <div> <h4 class = "p1"> Please fill out first name of staff member to see the detailed information </h4></div>
+        <div class="loginformdecoration" style="margin-bottom:50px;padding-left:30px;padding-right:30px">
+            <form action="staff.php" method="post">
+                <label>Name:</label>
+                <input type="text" name="firstname" style="margin:10px"><br>
+			         <!--<label>Email:</label>
+                    <input type="text" name="email" ><br><br>-->
+			    <input type="submit" value="Search">
+            </form>
+        </div>
+        
+        <div class="container-fluid">
+            <?php
+            require('mysqli_connect.php');
+            if($_SERVER['REQUEST_METHOD']=='POST')
+            {
+                if(!empty($_POST['firstname']) && isset($_POST['firstname']) && preg_match("/^[a-zA-Z]*$/",$_POST['firstname'])){
+				$firstname=mysqli_real_escape_string($dbc,$_POST['firstname']);
+                }
+                else
+                {
+                    echo '<script type="text/JavaScript">  
+     				alert("Please enter firstname having lowercase or uppercase letters only"); 
+					window.location.pathname= "capstoneproject/projectcoding/staff.php";
+                    </script>';
+                }
+                $q="select * from staff where firstname='$firstname'";
+                $s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
+                if($row = mysqli_fetch_array($s))
+                {
+                    echo '<div class="container-fluid">'
+                        .$row['firstname'].'<br>'
+                        .$row['lastname'].'<br>'
+                        .$row['email'].'<br>'
+                        .$row['department'].'<br>'
+                        .$row['phone'].'<br>
+                        </div>';
+                }
+                else
+                {
+                    echo 'no matching data available';
+                }
+            }
+            ?>
+            <!--<div class="row">
+            <div class="col-sm-4 StaffImage" > <img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            </div>-->
         </div>
         
        <!-- <div class = "staff"> 
@@ -132,8 +164,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <td> Arts</td>
                 </tr> 
             </table>
-        </div>-->
+</div>
     
+ <div class="col-sm-3 contact-address-part">
+                    
+                </div> -->
+              
+        
+		
 <div class="footer-upper-part">
 <center>Address: 76, KNOTTY PINE AVE, CAMBRIDGE, ONTARIO, CANADA</center>
 </div>
@@ -163,8 +201,5 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <div class="footer-lower-part">
             <center>Created By: Conestoga College Students</center>
         </div>
-
     </body>
-
-</html>
-
+</html> 
