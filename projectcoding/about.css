@@ -1,0 +1,82 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.P1
+{
+text-align: justify;
+padding: 0px 20px 0px 20px; 
+}
+h3
+{
+
+padding: 0 20px 0 20px; 
+}
+.part0
+{
+    height: 100px;
+    width: 100%;
+    background-color:#EBDC87;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.aboutgraphics
+{
+
+    height: 250px;
+    width: 80%;
+   
+}
+
+.aboutcircle
+{
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    
+}
+.scroller
+{
+    padding-top: 30px;
+    padding-bottom: 0px;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.part1
+{
+
+    padding: 30px 20px 30px 20px;
+}
+.part2
+{
+background-color: #EBDC87;
+color: #000000;
+    font-size: 15px;
+    padding: 15px 43px 15px 43px;
+}
+
+.part3
+{
+    
+    padding: 25px;
+    box-sizing: border-box;
+}
+h5
+{
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.loginpage
+{
+width:40%;
+height:300px;
+background-color:red;
+}
