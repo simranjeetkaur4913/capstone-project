@@ -1,10 +1,47 @@
 <?php
-require('mysqli_connect.php');
+require('C:\xampp\htdocs\capstoneproject\projectcoding\php\mysqli_connect.php');
 if($_SERVER['REQUEST_METHOD']=='POST'){
-$name=$_POST['name'];
+
+      if(!empty($_POST['name']) && preg_match("/^([a-zA-Z' ]+)$/",$_POST['name']) ){
+          $name=$_POST['name'];
+      }
+         else{
+              echo '<script type="text/Javascript">
+            alert("Please fill the name having lowercase or uppercase letters only included or excluded space !")
+            window.location="contact.php"
+            </script>';
+         }
+    if(!empty($_POST['phone']) &&  preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $_POST['phone'])){
+        $phone = $_POST['phone'];
+    }
+       else{
+           
+              echo '<script type="text/Javascript">
+            alert("Please fill the phone having order 000-000-0000 ");
+            window.location="contact.php"
+            </script>';
+       }
 $phone=$_POST['phone'];
-$email=$_POST['email'];
+    if(!empty($_POST['email']) && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+        $email=$_POST['email'];
+    }
+     else{
+              echo '<script type="text/Javascript">
+            alert("Please fill the proper email ")
+            window.location="contact.php"
+            </script>';
+         }
+
 $city=$_POST['city'];
+    if(!empty($_POST['city']) && preg_match("/^[a-zA-Z]*$/",$_POST['city']) ){
+          $name=$_POST['city'];
+      }
+    else{
+        echo '<script type="text/Javascript">
+            alert("Please fill the city having lowercase or uppercase letters only!")
+            window.location="contact.php"
+            </script>';
+    }
 $query=mysqli_query($dbc,"INSERT INTO contact(name,phone, email, city) VALUES ('$name','$phone','$email','$city')");
 if($query)
     echo '<script type="text/Javascript">
@@ -21,7 +58,7 @@ else
 <html>
     <head>
         <title>Delta English School</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -41,13 +78,13 @@ else
         </div>
         <input type="checkbox" id="small-menu" />
         <div class="nav">
-            <a href="index.php">Home</a>
-            <a href=#>About Us</a>
-            <a href=#>Staff</a>
-            <a href=#>Classes</a>
+             <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="staff.php">Staff</a>
+            <a href="department.html">Department</a>
             <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href=#>Admin Login</a>
+            <a href="login.html">Admin Login</a>
         </div>
         <div class="contact-top">Contact Us</div>
         <div class="contact-location-part">
@@ -60,7 +97,7 @@ else
                         <form action="contact.php" method="POST">
                             <h3>Get A Call Back From Us:</h3>
                              <input type="text" name="name" placeholder="Your Name Here"  class="textboxes"/><br><br>
-                             <input type="text" name="phone" placeholder="Your Contact Number"  class="textboxes"/><br><br>
+                             <input type="text" name="phone" placeholder="Your Contact Number, e.g(xxx-xxx-xxxx)"  class="textboxes"/><br><br>
                              <input type="text" name="email" placeholder="Your Email Address Here" class="textboxes"/><br><br>
                             <input type="text" name="city" placeholder="Your City Here" class="textboxes"/><br><br>
                              <input type="submit" name="submit" value="Submit Now"  class="contactbtn"/><br><br>

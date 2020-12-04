@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Delta English School</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -21,13 +21,13 @@
         </div>
         <input type="checkbox" id="small-menu" />
         <div class="nav">
-            <a href="index.php">Home</a>
-            <a href=#>About Us</a>
-            <a href=#>Staff</a>
-            <a href=#>Classes</a>
+              <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="staff.php">Staff</a>
+            <a href="department.html">Department</a>
             <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href=#>Admin Login</a>
+            <a href="login.html">Admin Login</a>
         </div>
         <div class="contact-top">Video Gallery</div>
         <div class="container-fluid">
