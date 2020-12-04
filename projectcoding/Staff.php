@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel = "stylesheet" type="text/css" href="about.css">
-        <link rel = "stylesheet" type="text/css" href="main.css">
+        <link rel = "stylesheet" type="text/css" href="css/about.css">
+        <link rel = "stylesheet" type="text/css" href="css/main.css">
         <link rel = "stylesheet" type="text/css" href="staff.css">
 
 
@@ -27,6 +27,7 @@
         <input type="checkbox" id="small-menu" />
         <div class="nav">
             <a href="home.html">Home</a>
+<<<<<<< HEAD
             <a href="about.php">About Us</a>
             <a href="staff.php">Staff</a>
             <a href="department.html">Department</a>
@@ -50,6 +51,64 @@
                 <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/Rajdeep.jpg" alt = "Vice Chairman" height= "260px" width = "100%" style= "border-radius: 100%"></div></div>
                 <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/simran.jpg" alt = "CEO" height= "260px" width = "100%" style= "border-radius: 100%"></div> </div>
             </div>
+=======
+            <a href="about.html">About Us</a>
+            <a href="staff.php">Staff</a>
+            <a href="department.php">Department</a>
+            <a href="video.php">Our Gallery</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="login.html">Admin Login</a>
+        </div>
+
+
+        <div class = "part0"> Staff </div>
+        <div class="loginformdecoration" style="margin-bottom:50px;padding-left:30px;padding-right:30px">
+        <form action="staff.php" method="post">
+            <label>Name:</label>
+            <input type="text" name="firstname" style="margin:10px">
+			 <!--<label>Email:</label>
+            <input type="text" name="email" ><br><br>-->
+			
+            <input type="submit" value="Search">
+            </form>
+        </div>
+        
+        <div class="container-fluid">
+			<?php
+require('C:\xampp\htdocs\capstoneproject\projectcoding\php\mysqli_connect.php');
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	
+	 if(!empty($_POST['firstname']) && isset($_POST['firstname']) && preg_match("/^[a-zA-Z]*$/",$_POST['firstname'])){
+				$firstname=mysqli_real_escape_string($dbc,$_POST['firstname']);
+			}
+	else{
+		echo '<script type="text/JavaScript">  
+     				alert("Please enter firstname having lowercase or uppercase letters only"); 
+					window.location.pathname= "capstoneproject/projectcoding/staff.php";
+     			</script>';
+	}
+	$q="select * from staff where firstname='$firstname'";
+	$s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
+	if($row = mysqli_fetch_array($s)){
+		echo '<div class="container-fluid">'
+		.$row['firstname'].'<br>'
+        . $row['lastname'].'<br>'
+        .$row['email'].'<br>'
+       .$row['department'].'<br>'
+       . $row['phone'].'<br>
+		 </div>';
+	}
+	else{
+		echo 'no matching data available';
+	}
+}
+?>
+            <!--<div class="row">
+            <div class="col-sm-4 StaffImage" > <img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            </div>-->
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0
         </div>
        
         <div> <h3> Full Time Employee Directory </h3> </div> 
@@ -168,11 +227,19 @@
     
  <div class="col-sm-3 contact-address-part">
                     
+<<<<<<< HEAD
                 </div> -->
               
         
 		
 <div class="footer-upper-part">
+=======
+                </div>
+              
+        
+		
+		 <div class="footer-upper-part">
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0
 <center>Address: 76, KNOTTY PINE AVE, CAMBRIDGE, ONTARIO, CANADA</center>
 </div>
 <div class="container-fluid">
@@ -201,5 +268,9 @@
         <div class="footer-lower-part">
             <center>Created By: Conestoga College Students</center>
         </div>
+<<<<<<< HEAD
     </body>
 </html> 
+=======
+
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0

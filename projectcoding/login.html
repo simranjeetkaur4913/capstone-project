@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>
-            Delta English School --About
+            Delta English School --Login
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel = "stylesheet" type="text/css" href="css/about.css">
+       <link rel = "stylesheet" type="text/css" href="css/about.css">
         <link rel = "stylesheet" type="text/css" href="css/main.css">
 
     </head>
@@ -28,23 +28,40 @@
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="staff.php">Staff</a>
-            <a href=#>Classes</a>
-            <a href=#>Our Gallery</a>
+            <a href="department.php">Department</a>
+            <a href="video.php">Our Gallery</a>
             <a href="contact.php">Contact Us</a>
-            <a href="signup.html">Admin Login</a>
+            <a href="login.html">Admin Login</a>
         </div>
-		<div classs="loginpage">
+        <div class="loginupdiv" >For Office Use Only</div>
+        <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-3 contact-form-part">
+                    
+                </div>
+                <div class="col-sm-6 contact-form-part">
+                    <div classs="loginpage">
 			<h1>Login</h1>
-		<form action="php/login.php" method="post">
-			<label>Username:</label>
-		<input type="text" name="username"><br><br>
-		<label>Password:</label>
-		<input type="text" name="password"><br><br>
-		<input type="Submit" value="Login" style="display: block">
-		<h4 style="display: inline-block"><a href="signup.html">New Account</a></h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<h4 style="display: inline-block"><a href="#">Forget your Password?</a></h4>
-			</form>
+            <div class="loginformdecoration">
+                <form action="php/login.php" method="post">
+                    <label>Username:</label>
+                    <input type="text" name="username" placeholder="email"><br><br>
+                    <label>Password:</label>
+                    <input type="text" name="password" placeholder="password"><br><br>
+                    <input type="submit" value="Login" style="display: block;border-radius:40%;padding:10px;box-sizing:border-box;">
+                    <!--<h4 style="display: inline-block"><a href="signup.html">New Account</a></h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">-->
+                    <h4 style="display: inline-block"><a href="#">Forget your Password?</a></h4>
+			    </form>
+            </div>
+		
 		</div>
+                </div>
+                <div class="col-sm-3 contact-address-part">
+                    
+                </div>
+              </div>
+        </div>
+		
 		 <div class="footer-upper-part">
 <center>Address: 76, KNOTTY PINE AVE, CAMBRIDGE, ONTARIO, CANADA</center>
 </div>

@@ -1,6 +1,14 @@
    <?php
-       if($_SERVER['REQUEST_METHOD']=='POST'){
-		if((empty($_POST['username']) && empty($_POST['password']) )){
+	require('C:\xampp\htdocs\capstoneproject\projectcoding\php\mysqli_connect.php');
+	if($_SERVER['REQUEST_METHOD']=='POST'){
+	$username=mysqli_real_escape_string($dbc,$_POST['username']);
+	$password=mysqli_real_escape_string($dbc,$_POST['password']);
+	$q="select * from signup where username='$username' AND password='$password'";
+	$s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
+	$total = mysqli_num_rows($s);
+//$username="admin";
+//$password="admin";
+			if((empty($_POST['username']) && empty($_POST['password']) )){
 			echo '<script type="text/JavaScript">  
      				alert("fill the fields"); 
 					window.location.pathname= "capstoneproject/projectcoding/login.html";
@@ -27,5 +35,17 @@
 			}
 			   
 		   }
-	   }
-        ?>
+		session_start();
+			if($total ==1){
+		
+		$_SESSION['username'] = $username;
+		echo "<script>location.href='admin.php'</script>";
+	
+	}
+	
+	else{
+	        echo "<script>alert('username or password incorrect!')</script>";
+	     	echo "<script>location.href='../login.html'</script>";
+	}
+	}
+       ?>
