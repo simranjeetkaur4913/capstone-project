@@ -188,7 +188,7 @@
             <center>Address: 76, Knotty Pine Ave, Cambridge</center>
         </div>
         <div class="container-fluid">
-              <div class="row footer-main">
+              <div class="row footer-main" id="footer_change">
                 <div class="col-sm-3 footer-inner-1"><h5 style="color:#F07114;font-weight:bold">Who We Are ?</h5>
                     <p style="font-size:11px;text-align:justify;color:#555555">Delta English School is a name you can relia upon. We are proving our services since 2008. we have a dedicated team and every team member is well qualified and experienced in his/her field. We are provding very good result every session and we also get appreciation from parents as well as from other educational bodies. Our school has world class infrastructure. We always organize different type of activities and programs for students which prove very benificial for their overall growth.</p>
                 </div>
