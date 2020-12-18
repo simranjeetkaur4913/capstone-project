@@ -1,0 +1,405 @@
+body
+{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+.topheader{
+	background-color: black;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	
+}
+#btnback{
+	background-color:#F07114;
+	border-radius: 5px;
+}
+#btnback1{
+	background-color:#F07114;
+	border-radius: 5px;
+}
+#btnback2{
+	background-color:#F07114;
+	border-radius: 5px;
+}
+#btnback3{
+	background-color:#F07114;
+	border-radius: 5px;
+}
+#btnback4{
+	background-color:#F07114;
+	border-radius: 5px;
+}
+
+.header-part
+{
+    width:100%;
+    background-color:#F07114;
+    color:#FAFAFA;
+    font-size:11px;
+    padding-left:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+    box-sizing:border-box;
+}
+.nav
+{
+    background-color:#FAFAFA;
+    display:flex;
+    justify-content:flex-end;
+}
+.nav a
+{
+    text-decoration:none;
+    color:#555555;
+    text-align:center;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:30px;
+    padding-right:30px;
+}
+.nav a:hover
+{
+    color:#F07114;
+    text-decoration:none;
+}
+#small-menu
+{
+    display:none;
+}
+.small-menu-container
+{
+    background-color:#FAFAFA;
+    color:#555555;
+    padding:8px;
+    display:none;
+    justify-content:flex-end;
+}
+.small-menu-container label
+{
+    width:40px;
+    height:36px;
+    background-color:#F07114;
+    color:#F07114;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.small-menu-container label span
+{
+    background-color:#FAFAFA;
+    width:84%;
+    height:2px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.under-slider-part
+{
+    height:auto;
+    padding-top:24px;
+    box-sizing:border-box;
+}
+.under-slider-part-1
+{
+    height:200px;
+    width:80%;
+    margin-left:25px;
+}
+.bgpicture
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home1.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+.bgpicture1
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home2.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bgpicture2
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home3.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.bgpicture3
+{
+    width:100%;
+    height:80%;
+    background-image:url('../images/home4.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.field
+{
+    width:100%;
+    height:20%;
+    background-color:#F07114;
+    color:#FAFAFA;
+    font-weight:bold;
+    padding-top:10px;
+    box-sizing:border-box;
+    text-align:center;
+}
+.footer-lower-part
+{
+    width:100%;
+    background-color:#F07114;
+    color:#FAFAFA;
+    padding:10px 0px 10px 0px;
+    font-size:12px;
+}
+.footer-upper-part
+{
+    width:100%;
+    background-color:#F07114;
+    color:#FAFAFA;
+    padding:10px 0px 10px 0px;
+    font-size:12px;
+}
+#innerfooter{
+	color:#F07114;
+}
+#innerfooter2{
+	color:#F07114;
+}
+#innerfooter3{
+	color:#F07114;
+}
+#innerfooter4{
+	color:#F07114;
+}
+#innerfooter5{
+	color:#F07114;
+}
+#innerfooter6{
+	color:#F07114
+}
+#innerfooter7{
+	color:#F07114;
+}
+#innerfooter8{
+	color:#F07114;
+}
+.footer-main
+{
+    background-color:#FAFAFA;
+    height:auto;
+}
+
+.footer-inner-1
+{
+    padding:6px 20px 20px 20px;
+}
+.footer-inner-2
+{
+    padding:6px 20px 20px 20px;
+}
+.footer-inner-3
+{
+    padding:6px 20px 20px 20px;
+}
+.footer-inner-4
+{
+    padding:6px 20px 20px 20px;
+}
+.footer-inner-2 ul
+{
+    list-style-type:none;
+}
+.footer-inner-2 ul li a
+{
+    text-decoration:none;
+    color:#555555;
+    font-size:12px;
+    line-height:24px;
+}
+.slide
+{
+    position:relative;
+    max-width:1400px;
+    margin:0px auto;
+}
+.slide .previous, .next
+{
+    position:absolute;
+    height:30px;
+    width:30px;
+    background-color:#FAFAFA;
+    color:#F07114;
+    top:40%;
+    margin-top:10px;
+    text-align:center;
+    line-height:33px;
+    border-radius:30px;
+}
+.slide .previous
+{
+    left:30px;
+}
+.slide .next
+{
+    right:30px;
+}
+.slide .slide-items .item img
+{
+    display:block;
+    max-width:100%;
+}
+.slide .slide-items .item
+{
+    display:none;
+}
+.slide .slide-items .item.active
+{
+    display:block;
+}
+.contact-top
+{
+    width:100%;
+    height:100px;
+    background-color:#F07114;
+    color:#000000;
+    font-size:30px;
+    padding-top:30px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.contact-location-part
+{
+    width:100%;
+    height:240px;
+    background-color:#F07114;
+    padding-top:10px;
+    box-sizing:border-box;
+}
+.contact-form-part
+{
+    padding:30px;
+    box-sizing:border-box;
+}
+.contact-address-part
+{
+    
+    padding:30px;
+    box-sizing:border-box;
+    height:408px;
+}
+.contact-form-holder
+{
+    width:100%;
+    height:auto;
+    padding:10px;
+    box-sizing:border-box;
+    border:2px solid #F07114;
+}
+.contact-address-holder
+{
+    width:100%;
+    height:auto;
+    padding:10px;
+    box-sizing:border-box;
+    border:2px solid #F07114;
+}
+.textboxes
+{
+    width:100%;
+    
+    
+    padding:3px;
+    box-sizing:border-box;
+}
+.contactbtn
+{
+    border:2px solid #F07114;
+    background-color:#FAFAFA;
+    border-radius:40px;
+    padding:7px;
+    box-sizing:border-box;
+    font-size:20px;
+    font-weight: bold;
+    box-shadow: 2px 5px #555555;
+}
+.contactbtn:hover{
+    background-color:#F07114;
+}
+
+.loginformdecoration
+{
+    width:100%;
+    height:auto;
+    border:2px solid #F07114;
+    padding:30px;
+    box-sizing:border-box;
+}
+.loginupdiv
+{
+    width:100%;
+    height:100px;
+    background-image:url('../images/loginup.jpg');
+    color:#000000;
+    font-size:30px;
+    padding-top:30px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.videoholder
+{
+    padding-top:30px;
+    padding-bottom:30px;
+    width:100%;
+    height:auto;
+    box-sizing:border-box;
+}
+#colorchange {
+	color:#F07114;
+}
+#colorchange1 {
+	color:#F07114;
+}
+#colorchange2 {
+	color:#F07114;
+}
+#colorchange3 {
+	color:#F07114;
+}
+#footer2{
+	color:#F07114;
+}
+#footer3{
+	color:#F07114;
+}
+#footer4{
+	color:#F07114;
+}
+#footer5{
+	color:#F07114;
+}
+
+
+@media screen and (max-width:650px)
+{
+    .nav
+    {
+        flex-direction:column;
+        display:none;
+    }
+    #small-menu:checked + .nav
+    {
+        display:flex;
+    }
+    .small-menu-container
+{
+    display:flex;
+}
+}
