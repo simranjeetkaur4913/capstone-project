@@ -18,8 +18,10 @@ padding: 0 20px 0 20px;
 {
     height: 100px;
     width: 100%;
-    background-color:#EBDC87;
+    background-color: #F07114; 
     font-size: 30px;
+    color: #FAFAFA;
+    font-weight: bold;
     text-align: center;
     padding-top: 30px;
     box-sizing: border-box;
@@ -67,6 +69,7 @@ color: #000000;
     
     padding: 25px;
     box-sizing: border-box;
+    text-align: justify;
 }
 h5
 {
