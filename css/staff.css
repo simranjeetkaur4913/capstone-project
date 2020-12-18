@@ -1,0 +1,51 @@
+.staff
+{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+.staff table tr th
+{
+    text-align: center;
+}
+
+.staff table tr td
+{
+    text-align: center;
+}
+.StaffImage
+{
+    padding: 30px 100px 30px 100px;
+    background-color: #FAF3DD;
+    
+}
+.aboutgraphics
+{
+
+    height: 250px;
+    width: 80%;
+   
+}
+
+.aboutcircle
+{
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    
+}
+.P1
+{
+text-align: justify;
+padding: 0px 20px 0px 20px; 
+}
+
+.chairman
+{
+    width: 50%;
+    height:auto;
+}
