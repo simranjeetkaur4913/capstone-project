@@ -5,8 +5,13 @@
 // selects the database, and sets the encoding.
 
 // Set the database access information as constants:
+<<<<<<< HEAD
 define('DB_USER', 'simran');
 define('DB_PASSWORD','simran');
+=======
+define('DB_USER', 'Rajdeep');
+define('DB_PASSWORD', 'Adminraj123');
+>>>>>>> 99341c4d17888b5c74b18cf3a110afc446d18675
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'deltaschool');
 
