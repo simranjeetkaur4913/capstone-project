@@ -16,9 +16,7 @@
 
     </head>
     <body>
-        <div class="header-part">
-            Get In Touch With Us: +1 2269728272
-        </div>
+        <div class="header-part"> Get In Touch With Us: +1 2269729272 </div>
         <div class="small-menu-container">
             <label for="small-menu">
                 <span></span>
@@ -29,6 +27,31 @@
         <input type="checkbox" id="small-menu" />
         <div class="nav">
             <a href="home.html">Home</a>
+<<<<<<< HEAD
+            <a href="about.php">About Us</a>
+            <a href="staff.php">Staff</a>
+            <a href="department.html">Department</a>
+            <a href="video.php">Our Gallery</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="signup.html">Admin Login</a>
+        </div>
+        
+        <div class = "part0"> Our School Staff Directory </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3>Chairman</h3> </div> </div>
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3> Pricipal </h3> </div> </div>
+                <div class="col-sm-4 " ><div style ="text-align: center"> <h3> Vice Principal </h3> </div> </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 aboutcircle" ><div class = "aboutgraphics"> <img src = "images/gurmeet.jpg" alt = "Chairman" height= "260px" width = "100%" style= "border-radius: 100%"> </div></div>
+                <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/Rajdeep.jpg" alt = "Vice Chairman" height= "260px" width = "100%" style= "border-radius: 100%"></div></div>
+                <div class="col-sm-4 aboutcircle"> <div class = "aboutgraphics"> <img src = "images/simran.jpg" alt = "CEO" height= "260px" width = "100%" style= "border-radius: 100%"></div> </div>
+            </div>
+=======
             <a href="about.html">About Us</a>
             <a href="staff.php">Staff</a>
             <a href="department.php">Department</a>
@@ -80,6 +103,59 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	}
 }
 ?>
+            <!--<div class="row">
+            <div class="col-sm-4 StaffImage" > <img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
+            </div>-->
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0
+        </div>
+       
+        <div> <h3> Full Time Employee Directory </h3> </div> 
+        <div> <h4 class = "p1"> Please fill out first name of staff member to see the detailed information </h4></div>
+        <div class="loginformdecoration" style="margin-bottom:50px;padding-left:30px;padding-right:30px">
+            <form action="staff.php" method="post">
+                <label>Name:</label>
+                <input type="text" name="firstname" style="margin:10px"><br>
+			         <!--<label>Email:</label>
+                    <input type="text" name="email" ><br><br>-->
+			    <input type="submit" value="Search">
+            </form>
+        </div>
+        
+        <div class="container-fluid">
+            <?php
+            require('mysqli_connect.php');
+            if($_SERVER['REQUEST_METHOD']=='POST')
+            {
+                if(!empty($_POST['firstname']) && isset($_POST['firstname']) && preg_match("/^[a-zA-Z]*$/",$_POST['firstname'])){
+				$firstname=mysqli_real_escape_string($dbc,$_POST['firstname']);
+                }
+                else
+                {
+                    echo '<script type="text/JavaScript">  
+     				alert("Please enter firstname having lowercase or uppercase letters only"); 
+					window.location.pathname= "capstoneproject/projectcoding/staff.php";
+                    </script>';
+                }
+                $q="select * from staff where firstname='$firstname'";
+                $s=@mysqli_query($dbc,$q) or die(mysqli_error($dbc));
+                if($row = mysqli_fetch_array($s))
+                {
+                    echo '<div class="container-fluid">'
+                        .$row['firstname'].'<br>'
+                        .$row['lastname'].'<br>'
+                        .$row['email'].'<br>'
+                        .$row['department'].'<br>'
+                        .$row['phone'].'<br>
+                        </div>';
+                }
+                else
+                {
+                    echo 'no matching data available';
+                }
+            }
+            ?>
             <!--<div class="row">
             <div class="col-sm-4 StaffImage" > <img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
             <div class="col-sm-4 StaffImage"><img src = "images/dummypic.jpg" height = "250px" width = "100%" style="border-radius:100%"></div>
@@ -147,15 +223,23 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <td> Arts</td>
                 </tr> 
             </table>
-        </div>-->
+</div>
     
  <div class="col-sm-3 contact-address-part">
                     
+<<<<<<< HEAD
+                </div> -->
+              
+        
+		
+<div class="footer-upper-part">
+=======
                 </div>
               
         
 		
 		 <div class="footer-upper-part">
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0
 <center>Address: 76, KNOTTY PINE AVE, CAMBRIDGE, ONTARIO, CANADA</center>
 </div>
 <div class="container-fluid">
@@ -184,4 +268,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <div class="footer-lower-part">
             <center>Created By: Conestoga College Students</center>
         </div>
+<<<<<<< HEAD
+    </body>
+</html> 
+=======
 
+>>>>>>> 0cd9167480d2ce5992b17bbd2df0931eb67002a0
